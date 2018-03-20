@@ -24,7 +24,7 @@ int main(int argc, char** argv) {
     //Set the random number seed
     
     //Declare all Variables Here
-    int nLoops=10000;
+    int nLoops=100;
     bool prime;//Determine if num2Test is prime
     
     //Input or initialize values Here
