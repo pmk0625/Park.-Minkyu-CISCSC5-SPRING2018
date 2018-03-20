@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=loop_example
+PROJECTNAME=Savitch_9thEd_Chap3_Question5_Prime
 
 # Active Configuration
 DEFAULTCONF=Debug

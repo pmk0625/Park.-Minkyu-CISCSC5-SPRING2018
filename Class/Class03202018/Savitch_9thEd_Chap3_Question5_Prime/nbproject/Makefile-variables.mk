@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=Cygwin-Windows
 CND_ARTIFACT_DIR_Debug=dist/Debug/Cygwin-Windows
-CND_ARTIFACT_NAME_Debug=loop_example
-CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin-Windows/loop_example
+CND_ARTIFACT_NAME_Debug=savitch_9thed_chap3_question5_prime
+CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin-Windows/savitch_9thed_chap3_question5_prime
 CND_PACKAGE_DIR_Debug=dist/Debug/Cygwin-Windows/package
-CND_PACKAGE_NAME_Debug=loopexample.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin-Windows/package/loopexample.tar
+CND_PACKAGE_NAME_Debug=savitch9thedchap3question5prime.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin-Windows/package/savitch9thedchap3question5prime.tar
 # Release configuration
 CND_PLATFORM_Release=Cygwin-Windows
 CND_ARTIFACT_DIR_Release=dist/Release/Cygwin-Windows
-CND_ARTIFACT_NAME_Release=loop_example
-CND_ARTIFACT_PATH_Release=dist/Release/Cygwin-Windows/loop_example
+CND_ARTIFACT_NAME_Release=savitch_9thed_chap3_question5_prime
+CND_ARTIFACT_PATH_Release=dist/Release/Cygwin-Windows/savitch_9thed_chap3_question5_prime
 CND_PACKAGE_DIR_Release=dist/Release/Cygwin-Windows/package
-CND_PACKAGE_NAME_Release=loopexample.tar
-CND_PACKAGE_PATH_Release=dist/Release/Cygwin-Windows/package/loopexample.tar
+CND_PACKAGE_NAME_Release=savitch9thedchap3question5prime.tar
+CND_PACKAGE_PATH_Release=dist/Release/Cygwin-Windows/package/savitch9thedchap3question5prime.tar
 #
 # include compiler specific variables
 #
