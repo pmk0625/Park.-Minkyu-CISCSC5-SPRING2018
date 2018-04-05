@@ -1,0 +1,17 @@
+Number of Craps Games Played =    3000000
+Result Table
+Throw       Wins     Loses
+  2          0      83119
+  3          0     166915
+  4      83125     166147
+  5     133541     200247
+  6     189279     227853
+  7     498159          0
+  8     190304     227774
+  9     133790     200065
+ 10      83224     166898
+ 11     166698          0
+ 12          0      82862
+ Sum   1478120    1521880    3000000
+Max Throws in a game    = 48
+Average Throws per game = 3.3799
