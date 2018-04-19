@@ -100,81 +100,93 @@ int main(int argc, char** argv) {
         case 7:ans4='L';break;
     }   
     
-    if (usrCh1==ans2 || usrCh1==ans3 || usrCh1==ans4){
+    /*if (usrCh1==ans2 || usrCh1==ans3 || usrCh1==ans4){
         clRight1=true;
-        }
-        if (usrCh2==ans1 || usrCh2==ans3 || usrCh2==ans4){
+    }
+    if (usrCh2==ans1 || usrCh2==ans3 || usrCh2==ans4){
         clRight2=true;
-        }
-        if (usrCh3==ans1 || usrCh3==ans2 || usrCh3==ans4){
+    }
+    if (usrCh3==ans1 || usrCh3==ans2 || usrCh3==ans4){
         clRight3=true;
-        }
-        if (usrCh4==ans1 || usrCh4==ans2 || usrCh4==ans3){
+    }
+    if (usrCh4==ans1 || usrCh4==ans2 || usrCh4==ans3){
         clRight4=true;
-        }
-        if (usrCh1==ans1){
+    }
+    if (usrCh1==ans1){
         plRight1=true;
-        }
-        if (usrCh2==ans2){
+    }
+    if (usrCh2==ans2){
         plRight2=true;
-        }
-        if (usrCh3==ans3){
+    }
+    if (usrCh3==ans3){
         plRight3=true;
-        }
-        if (usrCh4==ans4){
+    }
+    if (usrCh4==ans4){
         plRight4=true;
-        }
+    }
+    */
     
     //Main game programming starts here
     //Counter is set from 0 to 9 for user to have total of 10 tries
+    //User guesses and the program will display to user if
+    //the guess are correct, right color but wrong place, or incorrect
     for (int counter=0; counter <= 9; counter++){
         cin>>usrCh1>>usrCh2>>usrCh3>>usrCh4;
         cout<<"The colors consist of R=Red, B=Blue, G=Green, Y=Yellow, O=Orange "<<
             ",P=Purple, W=White, and L=Black"<<endl;
-        if (plRight1==true){
+        if (usrCh1==ans1){
+            plRight1=true;
             cout<<"You Guessed Answer 3 right"<<endl;
         }
-        else if (clRight1=true){
+        else if (usrCh1==ans2 || usrCh1==ans3 || usrCh1==ans4){
+            clRight1=true;
             cout<<"Right Color, Wrong Place"<<endl;
         }
         else{
             cout<<"Try again"<<endl;
         }
-        if (plRight2==true){
+        if (usrCh2==ans2){
+            plRight2=true;
             cout<<"You Guessed Answer 2 right"<<endl;
         }
-        else if (clRight2==true){
+        else if (usrCh2==ans1 || usrCh2==ans3 || usrCh2==ans4){
+            clRight2=true;
             cout<<"Right Color, Wrong Place"<<endl;
         }
         else{
             cout<<"Try again"<<endl;
         }
-        if (plRight3==true){
+        if (usrCh3==ans3){
+            plRight3=true;
             cout<<"You Guessed Answer 3 right"<<endl;
         }
-        else if (clRight3==true){
+        else if (usrCh3==ans1 || usrCh3==ans2 || usrCh3==ans4){
+            clRight3=true;
             cout<<"Right Color, Wrong Place"<<endl;
         }
         else{
             cout<<"Try again"<<endl;
         }
-        if (plRight4==true){
+        if (usrCh4==ans4){
+            plRight4=true;
             cout<<"You Guessed Answer 4 right"<<endl;
         }
-        else if (clRight4==true){
+        else if (usrCh4==ans1 || usrCh4==ans2 || usrCh4==ans3){
+            clRight4=true;
             cout<<"Right Color, Wrong Place"<<endl;
         }
         else{
             cout<<"Try again"<<endl;
         }
-        if (plRight1==true && plRight2==true && plRight3==true && plRight4==true){
+        if (usrCh1==ans1 && usrCh2==ans2 && usrCh3==ans3 && usrCh4==ans4){
         cout<<"You Win!!"<<endl;
         exit(0);
         }
     }
     
     //Output the Answer to the player
-    cout<<ans1<<" "<<ans2<<" "<<ans3<<" "<<ans4<<endl;
+    //The real answer randomly chosen will display to user
+    cout<<"The answer is! "<<ans1<<" "<<ans2<<" "<<ans3<<" "<<ans4<<endl;
     
 
     //Exit
