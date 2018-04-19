@@ -28,11 +28,6 @@ int main(int argc, char** argv) {
     int color2=rand()%8;
     int color3=rand()%8;
     int color4=rand()%8;
-    bool clRight1,clRight2,clRight3,clRight4;
-    bool plRight1,plRight2,plRight3,plRight4;
-    
-    clRight1=clRight2=clRight3=clRight4=false;
-    plRight1=plRight2=plRight3=plRight4=false;
     
     char ans1, ans2, ans3, ans4;
     char usrCh1, usrCh2, usrCh3,usrCh4;
@@ -48,13 +43,6 @@ int main(int argc, char** argv) {
             ",P=Purple, W=White, and L=Black"<<endl;
     cout<<"Put in your choice of colors (ex. 1stChoice 2ndChoice"
             <<" 3rdChoice 4thChoice)"<<endl;
-    
-    /*switch(color1){
-        case 0:ans1='R';break;
-        case 1:ans1='B';break;
-        case 2:ans1='G';break;
-        case 3:ans1='Y';break;
-    }*/
     
     if (color1==0) ans1='R';
     if (color1==1) ans1='B';
@@ -97,47 +85,50 @@ int main(int argc, char** argv) {
         cin>>usrCh1>>usrCh2>>usrCh3>>usrCh4;
         cout<<"The colors consist of R=Red, B=Blue, G=Green, Y=Yellow, O=Orange "<<
             ",P=Purple, W=White, and L=Black"<<endl;
-        if (plRight1==true){
+        if (usrCh1==ans1){
             cout<<"You Guessed Answer 1 right"<<endl;
+        }
+        else if (usrCh1==ans2 || usrCh1==ans3 || usrCh1==ans4){
+            cout<<"Right Color, Wrong Place"<<endl;
+        }
+        else{
+            cout<<"Try again"<<endl;
         }
         if (usrCh2==ans2){
             cout<<"You Guessed Answer 2 right"<<endl;
         }
-        if (usrCh3==ans3){
-            cout<<"You Guessed Answer 3 right"<<endl;
-        }
-        if (usrCh4==ans4){
-            cout<<"You Guessed Answer 4 right"<<endl;
-        }
-        if (clRight1==true){
-            cout<<"Right Color, Wrong Place"<<endl;
-        }
         else if (usrCh2==ans1 || usrCh2==ans3 || usrCh2==ans4){
             cout<<"Right Color, Wrong Place"<<endl;
+        }
+        else{
+            cout<<"Try again"<<endl;
+        }
+        if (usrCh3==ans3){
+            cout<<"You Guessed Answer 3 right"<<endl;
         }
         else if (usrCh3==ans1 || usrCh3==ans2 || usrCh3==ans4){
             cout<<"Right Color, Wrong Place"<<endl;
         }
+        else{
+            cout<<"Try again"<<endl;
+        }
+        if (usrCh4==ans4){
+            cout<<"You Guessed Answer 4 right"<<endl;
+        }
         else if (usrCh4==ans1 || usrCh4==ans2 || usrCh4==ans3){
             cout<<"Right Color, Wrong Place"<<endl;
         }
-        if (right1==true && usrCh2==ans2 && usrCh3==ans3 &&usrCh4==ans4){
+        else{
+            cout<<"Try again"<<endl;
+        }
+        if (usrCh1==ans1 && usrCh2==ans2 && usrCh3==ans3 &&usrCh4==ans4){
         cout<<"You Win!!"<<endl;
         exit(0);
-        }
-        else{
-            cout<<"Try again bitch"<<endl;
         }
     }
     
     //Process/Calculations Here
     
-    if(usrCh1==color1||usrCh1==color2||usrCh1==color3||usrCh1==color4){ //erase later biacht
-        clRight1=true; 
-    }
-    if(usrCh1==color1){ //erase later biacht
-        plRight1=true;
-    }
     //Output Located Here
     cout<<ans1<<" "<<ans2<<" "<<ans3<<" "<<ans4<<endl;
     
