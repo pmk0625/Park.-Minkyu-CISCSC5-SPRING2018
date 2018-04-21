@@ -48,7 +48,7 @@ int main(int argc, char** argv) {
     out.open(fileOut);
     totThrw=0;
     
-    //Re3ad in the number of games
+    //Read in the number of games
     while(in>>games);                       //while, Ternary Op.
     games=games>gameLm?gameLm:games;
     
