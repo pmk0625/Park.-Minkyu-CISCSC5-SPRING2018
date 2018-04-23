@@ -43,18 +43,6 @@ int main(int argc, char** argv) {
     
     string level;
     
-    clRight1=false;
-    clRight2=false;
-    clRight3=false;
-    clRight4=false;
-    clRight5=false;
-    
-    plRight1=false;
-    plRight2=false;
-    plRight3=false;
-    plRight4=false;
-    plRight5=false;
-    
     level="***DIFFICULTY LEVEL*** ";
     //Basic explanation of how the game works is written here
     //This information will display for user to follow while playing the game
@@ -80,49 +68,52 @@ int main(int argc, char** argv) {
                 //Four color is randomly chosen from here
                 //Using switch, color 1 - 4 is randomly chosen here as answers
                 //User must figure out what the code is in correct order
-                switch(color1){
-                    case 0:ans1='R';break;
-                    case 1:ans1='B';break;
-                    case 2:ans1='G';break;
-                    case 3:ans1='Y';break;
-                    case 4:ans1='O';break;
-                    case 5:ans1='P';break;
-                    case 6:ans1='W';break;
-                    case 7:ans1='L';break;
-                }
+                if (color1==0) ans1='R';
+				if (color1==1) ans1='B';
+				if (color1==2) ans1='G';
+				if (color1==3) ans1='Y';
+				if (color1==4) ans1='O';
+				if (color1==5) ans1='P';
+				if (color1==6) ans1='W';
+				if (color1==7) ans1='L';
+				
+				if (color2==0) ans2='R';
+				if (color2==1) ans2='B';
+				if (color2==2) ans2='G';
+				if (color2==3) ans2='Y';
+				if (color2==4) ans2='O';
+				if (color2==5) ans2='P';
+				if (color2==6) ans2='W';
+				if (color2==7) ans2='L';
+				
+				if (color3==0) ans3='R';
+				if (color3==1) ans3='B';
+				if (color3==2) ans3='G';
+				if (color3==3) ans3='Y';
+				if (color3==4) ans3='O';
+				if (color3==5) ans3='P';
+				if (color3==6) ans3='W';
+				if (color3==7) ans3='L';
+				
+				if (color4==0) ans4='R';
+				if (color4==1) ans4='B';
+				if (color4==2) ans4='G';
+				if (color4==3) ans4='Y';
+				if (color4==4) ans4='O';
+				if (color4==5) ans4='P';
+				if (color4==6) ans4='W';
+				if (color4==7) ans4='L';
+				
+                clRight1=false;
+                clRight2=false;
+                clRight3=false;
+                clRight4=false;
 
-                switch(color2){
-                    case 0:ans2='R';break;
-                    case 1:ans2='B';break;
-                    case 2:ans2='G';break;
-                    case 3:ans2='Y';break;
-                    case 4:ans2='O';break;
-                    case 5:ans2='P';break;
-                    case 6:ans2='W';break;
-                    case 7:ans2='L';break;
-                }
-
-                switch(color3){
-                    case 0:ans3='R';break;
-                    case 1:ans3='B';break;
-                    case 2:ans3='G';break;
-                    case 3:ans3='Y';break;
-                    case 4:ans3='O';break;
-                    case 5:ans3='P';break;
-                    case 6:ans3='W';break;
-                    case 7:ans3='L';break;
-                }
-
-                switch(color4){
-                    case 0:ans4='R';break;
-                    case 1:ans4='B';break;
-                    case 2:ans4='G';break;
-                    case 3:ans4='Y';break;
-                    case 4:ans4='O';break;
-                    case 5:ans4='P';break;
-                    case 6:ans4='W';break;
-                    case 7:ans4='L';break;
-                }
+                plRight1=false;
+                plRight2=false;
+                plRight3=false;
+                plRight4=false;
+                
                 cout<<level<<"1"<<endl;
                 cout<<"You must try to solve the 4 colors randomly assigned. "
                 <<"You have up to 10 guesses to get the 4 colors right."<<endl;
@@ -258,6 +249,17 @@ int main(int argc, char** argv) {
                     case 6:ans5='W';break;
                     case 7:ans5='L';break;
                 }
+                clRight1=false;
+                clRight2=false;
+                clRight3=false;
+                clRight4=false;
+                clRight5=false;
+
+                plRight1=false;
+                plRight2=false;
+                plRight3=false;
+                plRight4=false;
+                plRight5=false;
                 cout<<"Wow did you beat difficulty level 1 already? "<<endl;
                 cout<<level<<"2"<<endl;
                 cout<<"You must try to solve the 5 colors randomly assigned. "
