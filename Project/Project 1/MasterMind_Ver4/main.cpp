@@ -7,11 +7,9 @@
 
 //System Libraries Here
 #include <iostream>//I/O Library -> cout, endl
-#include <iomanip>//Format Library
 #include <cstdlib>//Rand/Srand
 #include <ctime>//Time Fuction
 #include <cstring>//String Fuction
-#include <cmath>//Math Library
 
 using namespace std;
 
@@ -56,53 +54,39 @@ int main(int argc, char** argv) {
     cout<<"Input your choice of colors as following"<<endl;
     cout<<"ALL CAPS; 1stChoice 2ndChoice 3rdChoice 4thChoice"<<endl;
     //Display menu
-    cout<<"Choose from the following Menu"<<endl;
-    cout<<"Type 1 for MasterMind Difficulty Level 1"<<endl;
-    cout<<"Type 2 for MasterMind Difficulty Level 2"<<endl;
-    cin>>choice;
+    do{
+        cout<<"Choose from the following Menu"<<endl;
+        cout<<"Type 1 for MasterMind Difficulty Level 1"<<endl;
+        cout<<"Type 2 for MasterMind Difficulty Level 2"<<endl;
+        cin>>choice;
+    }while (choice == 1 || choice == 2);
     
     
     if(choice>='1' && choice<='2'){
         switch(choice){
-            case '1':{
+            case '1':{             
                 //Four color is randomly chosen from here
                 //Using switch, color 1 - 4 is randomly chosen here as answers
                 //User must figure out what the code is in correct order
-                if (color1==0) ans1='R';
-				if (color1==1) ans1='B';
-				if (color1==2) ans1='G';
-				if (color1==3) ans1='Y';
-				if (color1==4) ans1='O';
-				if (color1==5) ans1='P';
-				if (color1==6) ans1='W';
-				if (color1==7) ans1='L';
+                ans1 = (color1 == 0 ? 'R' : (color1 == 1 ? 'B': 
+                       (color1 == 2 ? 'G':  (color1 == 3 ? 'Y': 
+                       (color1 == 4 ? 'O' : (color1 == 5 ? 'P': 
+                       (color1 == 6 ? 'W' : 'L')))))));
 				
-				if (color2==0) ans2='R';
-				if (color2==1) ans2='B';
-				if (color2==2) ans2='G';
-				if (color2==3) ans2='Y';
-				if (color2==4) ans2='O';
-				if (color2==5) ans2='P';
-				if (color2==6) ans2='W';
-				if (color2==7) ans2='L';
+		ans2 = (color2 == 0 ? 'R' : (color2 == 1 ? 'B': 
+                       (color2 == 2 ? 'G':  (color2 == 3 ? 'Y': 
+                       (color2 == 4 ? 'O' : (color2 == 5 ? 'P': 
+                       (color2 == 6 ? 'W' : 'L')))))));
 				
-				if (color3==0) ans3='R';
-				if (color3==1) ans3='B';
-				if (color3==2) ans3='G';
-				if (color3==3) ans3='Y';
-				if (color3==4) ans3='O';
-				if (color3==5) ans3='P';
-				if (color3==6) ans3='W';
-				if (color3==7) ans3='L';
+		ans3 = (color3 == 0 ? 'R' : (color3 == 1 ? 'B': 
+                       (color3 == 2 ? 'G':  (color3 == 3 ? 'Y': 
+                       (color3 == 4 ? 'O' : (color3 == 5 ? 'P': 
+                       (color3 == 6 ? 'W' : 'L')))))));
 				
-				if (color4==0) ans4='R';
-				if (color4==1) ans4='B';
-				if (color4==2) ans4='G';
-				if (color4==3) ans4='Y';
-				if (color4==4) ans4='O';
-				if (color4==5) ans4='P';
-				if (color4==6) ans4='W';
-				if (color4==7) ans4='L';
+		ans4 = (color4 == 0 ? 'R' : (color4 == 1 ? 'B': 
+                       (color4 == 2 ? 'G':  (color4 == 3 ? 'Y': 
+                       (color4 == 4 ? 'O' : (color4 == 5 ? 'P': 
+                       (color4 == 6 ? 'W' : 'L')))))));
 				
                 clRight1=false;
                 clRight2=false;
@@ -185,7 +169,7 @@ int main(int argc, char** argv) {
                     }
                     else if(counter==9){
                         cout<<"You Lose!!"<<endl;
-                        cout<<"The answer is! "<<ans1<<" "<<ans2<<" "<<ans3<<" "<<ans4<<" "<<ans5<<endl;
+                        cout<<"The answer is! "<<ans1<<" "<<ans2<<" "<<ans3<<" "<<ans4<<endl;
                         exit(0);
                     }
                 }
@@ -341,12 +325,11 @@ int main(int argc, char** argv) {
                     }
                     if (plRight1 && plRight2 && plRight3 && plRight4 && plRight5){
                         cout<<"You Win!!"<<endl;
-                        exit(0);
+                        counter=10;
                     }
                     else if(counter==9){
                         cout<<"You Lose!!"<<endl;
                         cout<<"The answer is! "<<ans1<<" "<<ans2<<" "<<ans3<<" "<<ans4<<" "<<ans5<<endl;
-                        exit(0);
                     }
                 }
             }
