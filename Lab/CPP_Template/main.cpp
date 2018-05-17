@@ -1,12 +1,15 @@
 /* 
  * File:   main.cpp
  * Author: Minkyu R. Park
- * Created on April 19, 2018, 11:30 AM
- * Purpose:  Create a CSC/CIS 5 Template
+ * Created on May 17, 2018, 11:30 AM
+ * Purpose:  Blackjack
  */
 
 //System Libraries
-#include <iostream>
+#include <iostream> //I/O Library
+#include <iomanip>  //Format Library
+#include <cstdlib>  //Random Numbers
+#include <ctime>     //Time
 using namespace std;
 
 //User Libraries
