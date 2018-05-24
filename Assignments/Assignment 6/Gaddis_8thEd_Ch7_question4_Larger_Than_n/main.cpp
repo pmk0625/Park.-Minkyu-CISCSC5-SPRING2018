@@ -17,7 +17,9 @@ using namespace std;
 //                   2-D Array Dimensions
 
 //Function Prototypes
-void display(int [], int, int);
+void fill(int, int );
+void larger(int, int, int);
+void print(int, int);
 
 //Execution Begins Here
 int main(int argc, char** argv) {
@@ -31,22 +33,35 @@ int main(int argc, char** argv) {
     
     
     //Process/Map inputs to outputs
-    display(array, size, 20);
+    fill(array, size);
+    larger(array, size, n);
     
     //Output data
-    
+    print(array, size);
     
     
     //Exit stage right!
     return 0;
 }
 
-void display(const int array[], int size, int n){
-    for (int i=0; i<size; i++){
-        if (array[i]<n){
-            cout<<array[i]<<endl;
-        }else{
-            cout<<n<<endl;
+void fill(int array[], int size){
+    for(int count=0;count<size;count++){
+        array[count]=rand()%10+1;//[1,10]
+    }
+}
+
+void larger(int array[], int size, int n){
+    for(int count=0;count<size;count++){
+        if(n>array[count]){
+            cout<<n<<" is greater than "<<array[count]<<endl;
         }
+    }
+}
+
+void print(int array[], int size){
+    cout<<"============================"<<endl;
+    cout<<"The contents of the array are : "<<endl;
+    for(int count=0;count<size;count++){
+        cout<<array[count]<<endl;
     }
 }
