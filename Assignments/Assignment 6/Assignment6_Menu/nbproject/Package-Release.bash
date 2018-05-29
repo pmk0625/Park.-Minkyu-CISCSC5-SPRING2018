@@ -7,15 +7,15 @@
 # Macros
 TOP=`pwd`
 CND_PLATFORM=Cygwin-Windows
-CND_CONF=Debug
+CND_CONF=Release
 CND_DISTDIR=dist
 CND_BUILDDIR=build
 CND_DLIB_EXT=dll
 NBTMPDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}/tmp-packaging
 TMPDIRNAME=tmp-packaging
-OUTPUT_PATH=${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ghaddis_8thed_ch8_question1_account_valid
-OUTPUT_BASENAME=ghaddis_8thed_ch8_question1_account_valid
-PACKAGE_TOP_DIR=ghaddis8thedch8question1accountvalid/
+OUTPUT_PATH=${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/assignment6_menu
+OUTPUT_BASENAME=assignment6_menu
+PACKAGE_TOP_DIR=assignment6menu/
 
 # Functions
 function checkReturnCode
@@ -60,15 +60,15 @@ mkdir -p ${NBTMPDIR}
 
 # Copy files and create directories and links
 cd "${TOP}"
-makeDirectory "${NBTMPDIR}/ghaddis8thedch8question1accountvalid/bin"
+makeDirectory "${NBTMPDIR}/assignment6menu/bin"
 copyFileToTmpDir "${OUTPUT_PATH}.exe" "${NBTMPDIR}/${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}.exe" 0755
 
 
 # Generate tar file
 cd "${TOP}"
-rm -f ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/package/ghaddis8thedch8question1accountvalid.tar
+rm -f ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/package/assignment6menu.tar
 cd ${NBTMPDIR}
-tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/package/ghaddis8thedch8question1accountvalid.tar *
+tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/package/assignment6menu.tar *
 checkReturnCode
 
 # Cleanup

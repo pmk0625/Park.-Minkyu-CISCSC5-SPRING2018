@@ -31,7 +31,7 @@ int main(int argc, char** argv) {
     int mo, le;
     
     //Display the outputs
-   for (int i=0; i<monkey; i++){
+    for (int i=0; i<monkey; i++){
         for (int j=0; j<day; j++){
             cout << "Monkey " << i+1 << " Day " << j+1 << " : ";
             cin >> array [i][j];

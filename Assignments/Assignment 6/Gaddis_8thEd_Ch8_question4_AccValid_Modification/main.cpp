@@ -2,7 +2,7 @@
  * File:  main.cpp
  * Author: Minkyu R. Park	
  * Created on May 28 2018 at 3:30PM
- * Purpose:  Charge Account Validation
+ * Purpose:  Charge Account Validation Modification
  */
 
 //System Libraries Here

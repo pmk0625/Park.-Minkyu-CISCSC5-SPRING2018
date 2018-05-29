@@ -2,7 +2,7 @@
  * File:   main.cpp
  * Author: Minkyu R. Park
  * Created on May 26, 2018, 10:00 PM
- * Purpose:  Monkey Business
+ * Purpose:  Lottery Winners
  */
 
 //System Libraries
@@ -25,7 +25,6 @@ bool linear(int [], int, int);
 //Program Execution Begins Here
 
 int main(int argc, char** argv) {
-    
     //Declare all Variables Here
     int lottery;//The weeks winning numbers that the user will input
     int size=10;// Size that will be passed on during the search

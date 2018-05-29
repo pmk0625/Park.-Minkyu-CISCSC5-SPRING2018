@@ -2,7 +2,7 @@
  * File:   main.cpp
  * Author: Minkyu R. Park
  * Created on May 24, 2018, 12:15 PM
- * Purpose:  Rainfall Statistics
+ * Purpose:  Rain or Shine
  */
 
 //System Libraries
