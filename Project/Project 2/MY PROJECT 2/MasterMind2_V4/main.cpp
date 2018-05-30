@@ -127,7 +127,7 @@ int main(int argc, char** argv) {
                     for (int i=0; i<5; i++){
                         ansVect.push_back(ans[i]);
                     }
-                    if (checkWon2(&usrCh, ans)){
+                    if (checkWon2(usrVect, ansVect)){
                         cout << "You Win!!" << endl;
                         exit(0);
                     } else if (counter == 9) {
@@ -186,7 +186,7 @@ void answer1(int color[], char ans[]) {
             (color[3] == 6 ? 'W' : 'L')))))));
 }
 
-void answer2(int *color, int *ans) {
+void answer2(int *color, char *ans) {
     *(ans + 0) = (*(color + 0) == 0 ? 'R' : (*(color + 0) == 1 ? 'B' :
             (*(color + 0) == 2 ? 'G' : (*(color + 0) == 3 ? 'Y' :
             (*(color + 0) == 4 ? 'O' : (*(color + 0) == 5 ? 'P' :
