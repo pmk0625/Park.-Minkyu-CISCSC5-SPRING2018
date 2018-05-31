@@ -23,7 +23,7 @@ char LEVEL(char);
 void answer1(int [], char []);
 void answer2(int *, char *);
 bool checkWon(char [], char []);
-bool checkWon2(vector<char>, vector<char>);
+bool checkWon2(vector<char>, char *);
 
 
 //Program Execution Begins Here
@@ -120,14 +120,10 @@ int main(int argc, char** argv) {
                     cout << "HINT: THE COLORS MAY OVERLAP. TRY ALL POSSIBLE COLORS "
                             << "AND IF THE ANSWER IS NOT FOUND, TRY OVERLAPPING COLORS " << endl;
                     vector<char>usrVect;
-                    vector<char>ansVect;
                     for (int i=0; i<5; i++){
                         usrVect.push_back(usrCh[i]);
                     }
-                    for (int i=0; i<5; i++){
-                        ansVect.push_back(ans[i]);
-                    }
-                    if (checkWon2(usrVect, ansVect)){
+                    if (checkWon2(usrVect, ans)){
                         cout << "You Win!!" << endl;
                         exit(0);
                     } else if (counter == 9) {
@@ -276,7 +272,7 @@ bool checkWon(char usrCh[], char ans[]) {
     }
 }
 
-bool checkWon2(vector<char> usrCh, vector<char> ans) {
+bool checkWon2(vector<char> usrCh, char *ans) {
     bool clRight[5];
     bool plRight[5];
     for (int i = 0; i < 5; i++) {
