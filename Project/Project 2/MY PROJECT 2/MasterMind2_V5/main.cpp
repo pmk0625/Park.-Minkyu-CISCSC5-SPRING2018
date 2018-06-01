@@ -35,7 +35,7 @@ int main(int argc, char** argv) {
     //Declare all Variables Here
     int color[5]; //Number of Colors Array
     for (int i = 0; i < 5; i++) {  //Set Random Answers using For Loop
-        color[i] = rand() % 8;
+        color[i] = rand() % 8;     //Random Colors (1, 8)
     }
 
     char ans[5];  //Number of Answers Array
