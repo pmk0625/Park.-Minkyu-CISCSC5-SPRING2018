@@ -19,11 +19,11 @@ using namespace std;
 //Like PI, e, Gravity, or conversions
 
 //Function Prototypes Here
-char LEVEL(char);
-void answer1(int [], char []);
-void answer2(int *, char *);
-bool checkWon(char [], char []);
-bool checkWon2(vector<char>, char *);
+char LEVEL(char); //Set Difficulty Level
+void answer1(int [], char []); //Set Answers for Level 1
+void answer2(int *, char *);   //Set Answers for level 2
+bool checkWon(char [], char []);      //Check Answers for Level 1
+bool checkWon2(vector<char>, char *); //Check Answers for Level 2
 
 
 //Program Execution Begins Here
@@ -33,37 +33,37 @@ int main(int argc, char** argv) {
     srand(static_cast<unsigned int> (time(0)));
 
     //Declare all Variables Here
-    int color[5];
-    for (int i = 0; i < 5; i++) {
+    int color[5]; //Number of Colors Array
+    for (int i = 0; i < 5; i++) {  //Set Random Answers using For Loop
         color[i] = rand() % 8;
     }
 
-    char ans[5];
-    char usrCh[5];
+    char ans[5];  //Number of Answers Array
+    char usrCh[5];//Input User Choice Array
     char choice;
 
-    bool clRight1[4];
-    bool plRight1[4];
+    bool clRight1[4]; //bool Color Right
+    bool plRight1[4]; //bool Place Right
 
-    vector<bool> clRight2(5);
-    vector<bool> plRight2(5);
+    vector<bool> clRight2(5); //Vector bool Color Right
+    vector<bool> plRight2(5); //Vector bool Place Right
 
-    string level;
+    string level; //String level comment
 
     level = "***DIFFICULTY LEVEL*** ";
 
     //Display menu
     choice = LEVEL(choice);
-    if (choice >= '1' && choice <= '2') {
-        switch (choice) {
+    if (choice >= '1' && choice <= '2') {  //Input 1 for Difficulty Level 1
+        switch (choice) {                  //Input 2 for Difficulty Level 2
             case '1':
             {
                 //Four color is randomly chosen from here
                 //Using switch, color 1 - 4 is randomly chosen here as answers
                 //User must figure out what the code is in correct order
-                answer1(color, ans);
+                answer1(color, ans); //Call Function Random Set Answers 1
 
-                for (int i = 0; i < 4; i++) {
+                for (int i = 0; i < 4; i++) { //Initialize Color Right, Place Right
                     clRight1[i] = false;
                     plRight1[i] = false;
                 }
@@ -81,10 +81,10 @@ int main(int argc, char** argv) {
                             << "O=ORANGE,P=PURPLE, W=WHITE, and L=BLACK" << endl;
                     cout << "HINT: THE COLORS MAY OVERLAP. TRY ALL POSSIBLE COLORS "
                             << "AND IF THE ANSWER IS NOT FOUND, TRY OVERLAPPING COLORS " << endl;
-                    if (checkWon(usrCh, ans)) {
+                    if (checkWon(usrCh, ans)) {  //Call Function to Compare User Choice and Answers
                         cout << "You Win!!" << endl;
                         exit(0);
-                    } else if (counter == 9) {
+                    } else if (counter == 9) {   //Counter starts 0-9; User Lose Game Ends
                         cout << "You Lose!!" << endl;
                         cout << "The answer is! " << ans[0] << " " << ans[1] << " " << ans[2] << " " << ans[3] << endl;
                         exit(0);
@@ -97,9 +97,9 @@ int main(int argc, char** argv) {
                 //Five color is randomly chosen from here
                 //Using switch, color 1 - 5 is randomly chosen here as answers
                 //User must figure out what the code is in correct order
-                answer2(color, ans);
+                answer2(color, ans); //Call Function Random Set Answers 2
 
-                for (int i = 0; i < 5; i++) {
+                for (int i = 0; i < 5; i++) { //Initialize Color Right, Place Right
                     clRight2[i] = false;
                     plRight2[i] = false;
                 }
@@ -119,16 +119,17 @@ int main(int argc, char** argv) {
                             << "O=ORANGE,P=PURPLE, W=WHITE, and L=BLACK" << endl;
                     cout << "HINT: THE COLORS MAY OVERLAP. TRY ALL POSSIBLE COLORS "
                             << "AND IF THE ANSWER IS NOT FOUND, TRY OVERLAPPING COLORS " << endl;
-                    vector<char>usrVect;
-                    for (int i=0; i<5; i++){
+                    vector<char>usrVect; //Using Vector to Fill User Choice
+                    for (int i=0; i<5; i++){  
                         usrVect.push_back(usrCh[i]);
                     }
-                    if (checkWon2(usrVect, ans)){
+                    if (checkWon2(usrVect, ans)){  //Call Function to Compare User Choice and Answers
                         cout << "You Win!!" << endl;
                         exit(0);
-                    } else if (counter == 9) {
+                    } else if (counter == 9) {     //Counter starts 0-9; User Lose Game Ends
                         cout << "You Lose!!" << endl;
-                        cout << "The answer is! " << ans[0] << " " << ans[1] << " " << ans[2] << " " << ans[3] << endl;
+                        cout << "The answer is! " << ans[0] << " " << ans[1] 
+                                << " " << ans[2] << " " << ans[3] << endl;
                         exit(0);
                     }
                 }
@@ -146,7 +147,8 @@ char LEVEL(char choice) {
     //will continue to display for the player while playing
     cout << "This Program plays a game called MasterMind" << endl;
     cout << "There is 8 colors you can choose from to solve the code" << endl;
-    cout << "Find specific colors and the orders of the colors that matches exactly with the answer" << endl;
+    cout << "Find specific colors and the orders of the colors"
+            <<"that matches exactly with the answer" << endl;
     cout << "The colors consist of : R=RED, B=BLUE, G=GREEN, Y=YELLOW, "
             << "O=ORANGE,P=PURPLE, W=WHITE, and L=BLACK" << endl;
     cout << "Input your choice of colors as following" << endl;
@@ -160,7 +162,7 @@ char LEVEL(char choice) {
     return choice;
 }
 
-void answer1(int color[], char ans[]) {
+void answer1(int color[], char ans[]) { //Void Function, Set Answer 1
     ans[0] = (color[0] == 0 ? 'R' : (color[0] == 1 ? 'B' :
             (color[0] == 2 ? 'G' : (color[0] == 3 ? 'Y' :
             (color[0] == 4 ? 'O' : (color[0] == 5 ? 'P' :
@@ -182,7 +184,7 @@ void answer1(int color[], char ans[]) {
             (color[3] == 6 ? 'W' : 'L')))))));
 }
 
-void answer2(int *color, char *ans) {
+void answer2(int *color, char *ans) { //Void Function, Set Answer 2
     *(ans + 0) = (*(color + 0) == 0 ? 'R' : (*(color + 0) == 1 ? 'B' :
             (*(color + 0) == 2 ? 'G' : (*(color + 0) == 3 ? 'Y' :
             (*(color + 0) == 4 ? 'O' : (*(color + 0) == 5 ? 'P' :
@@ -209,7 +211,7 @@ void answer2(int *color, char *ans) {
             (*(color + 4) == 6 ? 'W' : 'L')))))));
 }
 
-bool checkWon(char usrCh[], char ans[]) {
+bool checkWon(char usrCh[], char ans[]) { //bool Function, Compare User Choice and Answer 1
     bool clRight[4];
     bool plRight[4];
     for (int i = 0; i < 4; i++) {
@@ -272,7 +274,7 @@ bool checkWon(char usrCh[], char ans[]) {
     }
 }
 
-bool checkWon2(vector<char> usrCh, char *ans) {
+bool checkWon2(vector<char> usrCh, char *ans) { //bool Function, Compare User Choice and Answer 2
     bool clRight[5];
     bool plRight[5];
     for (int i = 0; i < 5; i++) {
