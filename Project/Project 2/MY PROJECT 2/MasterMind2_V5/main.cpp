@@ -33,17 +33,20 @@ int main(int argc, char** argv) {
     srand(static_cast<unsigned int> (time(0)));
 
     //Declare all Variables Here
-    int color[5]; //Number of Colors Array
+    const int SIZE1=4;
+    const int SIZE2=5;
+    
+    int color[SIZE2]; //Number of Colors Array
     for (int i = 0; i < 5; i++) {  //Set Random Answers using For Loop
         color[i] = rand() % 8;     //Random Colors (1, 8)
     }
-
-    char ans[5];  //Number of Answers Array
-    char usrCh[5];//Input User Choice Array
+    
+    char ans[SIZE1];  //Number of Answers Array
+    char usrCh[SIZE1];//Input User Choice Array
     char choice;
 
-    bool clRight1[4]; //bool Color Right
-    bool plRight1[4]; //bool Place Right
+    bool clRight1[SIZE2]; //bool Color Right
+    bool plRight1[SIZE2]; //bool Place Right
 
     vector<bool> clRight2(5); //Vector bool Color Right
     vector<bool> plRight2(5); //Vector bool Place Right
